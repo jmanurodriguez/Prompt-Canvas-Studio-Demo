@@ -1,0 +1,37 @@
+{
+  "name": "Prompt Canvas Studio",
+  "short_name": "Prompt Canvas",
+  "description": "Crea y comparte prompts efectivos para IA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4F46E5",
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/dpcpcnqmq/image/upload/v1738782416/android-chrome-192x192_bp3d8l.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://res.cloudinary.com/dpcpcnqmq/image/upload/v1738782416/android-chrome-512x512_z0nysn.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "any",
+  "categories": ["productivity", "utilities"],
+  "screenshots": [
+    {
+      "src": "path/to/screenshot1.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Nuevo Prompt",
+      "url": "/builder",
+      "icons": [{ "src": "path/to/icon.png", "sizes": "96x96" }]
+    }
+  ]
+} 

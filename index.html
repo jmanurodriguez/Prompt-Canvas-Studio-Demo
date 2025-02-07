@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicons con efectos -->
+    <style>
+      .favicon-link {
+        display: inline-block;
+        transform: scale(4);
+        filter: drop-shadow(0 0 10px rgba(79, 70, 229, 0.5));
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+      
+      @keyframes glow {
+        from {
+          filter: drop-shadow(0 0 10px rgba(79, 70, 229, 0.5));
+        }
+        to {
+          filter: drop-shadow(0 0 20px rgba(79, 70, 229, 0.8));
+        }
+      }
+    </style>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/png" href="/assets/icons/favicon-32x32.png">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4F46E5">
+    
+    <!-- SEO -->
+    <title>Prompt Canvas Studio - Crea y comparte prompts efectivos para IA</title>
+    <meta name="description" content="Plataforma para crear, compartir y descubrir prompts efectivos para Inteligencia Artificial. Únete a la comunidad y mejora tus resultados con IA.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://promptcanvas.com/">
+    <meta property="og:title" content="Prompt Canvas Studio">
+    <meta property="og:description" content="Crea y comparte prompts efectivos para IA">
+    <meta property="og:image" content="https://res.cloudinary.com/dpcpcnqmq/image/upload/v1738782416/android-chrome-512x512_z0nysn.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://promptcanvas.com/">
+    <meta property="twitter:title" content="Prompt Canvas Studio">
+    <meta property="twitter:description" content="Crea y comparte prompts efectivos para IA">
+    <meta property="twitter:image" content="https://res.cloudinary.com/dpcpcnqmq/image/upload/v1738782416/android-chrome-512x512_z0nysn.png">
+    
+    <!-- Otras metas -->
+    <meta name="application-name" content="Prompt Canvas Studio">
+    <meta name="apple-mobile-web-app-title" content="Prompt Canvas">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#4F46E5">
+    <meta name="msapplication-tap-highlight" content="no">
+    
+    <!-- Preconectar con recursos importantes -->
+    <link rel="preconnect" href="https://res.cloudinary.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Agregar en el head -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    <link rel="preload" as="image" href="https://res.cloudinary.com/dpcpcnqmq/image/upload/v1738850997/Prompt_qahsgv.png">
+    <link rel="dns-prefetch" href="https://res.cloudinary.com">
+    <meta name="google" content="notranslate">
+  </head>
+  <body class="h-full">
+    <div id="root" class="h-full"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/serviceWorker.js')
+            .then(registration => {
+              console.log('ServiceWorker registrado')
+            })
+            .catch(error => {
+              console.log('Error al registrar ServiceWorker:', error)
+            })
+        })
+      }
+    </script>
+  </body>
+</html>
